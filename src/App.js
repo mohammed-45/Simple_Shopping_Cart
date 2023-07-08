@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Store from "./components/Store";
 import About from "./components/About";
@@ -9,7 +9,7 @@ import ShoppingCartProvider from "./context/ShoppingCartContext";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ShoppingCartProvider>
         <Navbar />
         <Container className="mb-4">
@@ -20,7 +20,7 @@ function App() {
           </Routes>
         </Container>
       </ShoppingCartProvider>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
